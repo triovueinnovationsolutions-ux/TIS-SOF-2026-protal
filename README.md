@@ -1,76 +1,62 @@
-# Triovue Hardware Project Manager (Node.js)
+# Triovue Employee Portal (Node.js)
 
-Express + EJS + SQLite app for hardware / PCB project management.
+A local-first employee management starter built with native Node.js HTTP APIs and plain HTML/CSS/JavaScript. It includes a dark responsive dashboard, employee directory, attendance punches, task management, projects, leave requests, holidays, timesheets, announcements, CSV exports and a basic audit trail.
 
-## Run on localhost
-Requires Node.js 18+ (22 LTS recommended).
+## Requirements
+- Node.js 18 or newer
 
-    npm install
-    npm start
+## Run locally
+```bash
+cd triovue-employee-portal
+npm start
+```
+Open http://localhost:3000
 
-Open http://localhost:3000  (other port: `PORT=4000 npm start`; PowerShell: `$env:PORT=4000; npm start`)
+For automatic restart while editing (Node.js watch mode):
+```bash
+npm run dev
+```
 
-The database (`hardware_pm.db`) is created and seeded on first run. **Upgrading from an earlier zip?** Just copy the new
-files over the old ones and run `npm install` again — the app migrates your existing database automatically (no data loss).
-Uploaded files are stored in the `uploads/` folder.
+## Demo sign-in accounts
 
-## Features
-**Planning**
-- **Dashboard** – project progress, team performance, my tasks, due-this-week, overdue, failing tests, open compliance items.
-- **Projects** – code, client, product type, revision, PCB layers, board size, MCU, budget, priority, 11-stage lifecycle tracker.
-  Any employee can be the project manager.
-- **Generate PCB workflow** – creates up to 15 linked tasks (requirements → schematic → Gate A → layout → Gate B → Gerber → BOM →
-  bring-up → testing). Choose the project manager and the employee for each role, then customise every step (title, days,
-  a different employee, or skip it).
-- **Task Board / Timeline (Gantt) / Teams & employees / file attachments with revision**.
+The starter includes three demo roles for local testing:
 
-**Design data**
-- **Components & BOM** – category, designator, package, supplier, lead time, datasheet, alternate part. Export to Excel.
-- **BOM Excel Files** – upload the BOM `.xlsx` / `.xls` / `.csv` to the server with a version, revision and status
-  (Draft → In Review → Approved → Released). `.xlsx` / `.csv` files can be imported into the parts list automatically.
-- **Revisions** – hardware revision history: change log, ECO/ECN, schematic / PCB / firmware versions, BOM file, release control.
-
-**Quality & compliance**
-- **Requirements** – auto-numbered (REQ-001…), category, source, standard reference, verification status.
-- **Test Cases** – "Generate standard test plan" creates 25 tests for EVT, DVT, PVT and mass production (power-up, boot,
-  ESD/EMI, thermal, burn-in, ICT, FCT, firmware programming, final QA…). Record runs per revision and serial number; a failed run
-  opens an Issue automatically.
-- **Compliance** – track standards (RoHS, REACH, CE, FCC, IEC 61000-4-x, IEC 62368-1, IPC, ISO 9001, BIS, WPC…) with status,
-  lab, report/certificate numbers, expiry warnings and evidence file uploads. *The list is a starting checklist — confirm
-  applicability with your test lab / certification body.*
-- **Traceability** – requirement ↔ test matrix with coverage, plus serial-number back-tracking.
-
-**Manufacturing**
-- **Production Batches** – batch / lot, build phase (Prototype, EVT, DVT, PVT, Mass Production), revision, BOM file, vendors,
-  PCB date code. Serial numbers are generated automatically and each unit has a status and test history.
-- **Trace any serial number** back to its batch, revision, BOM file, vendors and test results.
-
-## Admin console (Admin only)
-Sidebar → **Admin Console**. Add and rename employees and project managers (name, designation, role, team), reset passwords,
-deactivate leavers (they cannot sign in; history is kept) and set the project manager of every project.
-Only Admins can change a project's manager; Project Managers who create a project become its manager automatically.
-Passwords must be at least 6 characters.
-
-## Demo logins (change before real use)
-| Role | Email | Password |
+| Role | Username | Password |
 |---|---|---|
-| Admin | admin@example.com | admin123 |
-| Project Manager | pm@example.com | pm123 |
-| Hardware Engineer | hw@example.com | hw123 |
-| PCB Engineer | pcb@example.com | pcb123 |
-| Firmware Engineer | fw@example.com | fw123 |
-| Testing Engineer | test@example.com | test123 |
-| Reviewer | rev@example.com | rev123 |
+| Employee | `employee` | `employee123` |
+| Admin | `admin` | `admin123` |
+| Super Admin | `superadmin` | `super123` |
 
-Set the `SECRET_KEY` env var for anything beyond local use. Theme colours: top of `public/style.css`.
+The employee demo account is mapped to Antos Pravin in the sample data. These credentials are hard-coded demo credentials and must be replaced before deployment. Sessions are held in memory and are cleared when the server restarts.
 
-## Troubleshooting
-If `npm install` fails building `better-sqlite3`, use Node 22 LTS or install build tools (Windows: Visual Studio Build
-Tools "Desktop development with C++"; macOS: `xcode-select --install`; Linux: `build-essential python3`).
+## Role access
+- Employee: personal attendance, assigned tasks, own leave and timesheet records, announcements and read-only project information.
+- Admin: operational access to employee and HR workspace modules.
+- Super Admin: full access to the portal modules and organization-wide reports/audit view.
 
-## Notes
-- Uploaded files (attachments, BOM Excel files, compliance evidence) are stored in `uploads/` — back this folder up with `hardware_pm.db`.
-- Rename the demo employees under **Team → Edit** and set real emails / passwords.
+The Super Admin overview is a separate role-specific landing page. User provisioning and role changes are not yet exposed as an in-app screen.
 
-## Still to build
-Email/deadline notifications, formal ECO/ECN approval workflow, procurement tracking, attendance, advanced reports.
+## Data
+The server creates `data.json` on first launch and persists changes there. Back up this file regularly. Delete it only if you want to reset the demo data (the server recreates it on next start).
+
+## Important before production
+This is a development starter, not a production HRMS. The included login and role checks are demo scaffolding only: credentials are hard-coded, sessions are in-memory, there is no password reset or user provisioning flow, and there is no CSRF protection, database backup automation, HTTPS configuration, or hardened audit storage. The visible Super Admin label is illustrative only. Do not enter real employee personal, payroll, medical, identity or other sensitive data until authentication, authorization, security review and a proper database are implemented. Use PostgreSQL/MySQL for multi-user production deployment.
+
+## Main API
+- `GET /api/health`
+- `GET /api/data`
+- `GET /api/:collection`
+- `POST /api/:collection`
+- `PUT /api/:collection/:id`
+- `DELETE /api/:collection/:id`
+- `POST /api/attendance/punch`
+- `GET /api/export/:collection` (CSV)
+
+Collections: employees, attendance, tasks, holidays, leaves, projects, timesheets, announcements.
+
+## Dynamically generated employee login credentials
+When an Admin or Super Admin creates a new employee in the Employees section, the server creates a unique username from the employee name (for example, `first.last`; duplicate names receive a numeric suffix) and a cryptographically random temporary password. The Add Employee form explains this before saving. After the employee is saved, both values appear in a one-time confirmation panel; copy and share them with the employee securely. Passwords are stored as scrypt hashes, never plaintext. Accounts are stored in the private `users` collection in `data.json` and are excluded from general API responses. Each account is linked to its employee record by employee ID. Deleting an employee disables their login. Existing sample employees do not automatically receive accounts; add a new employee record to provision a login. The temporary-password flag is recorded, but forced password change is not yet implemented.
+
+
+## Audit log captures record data
+The audit log now stores the record snapshot for creates and deletes, and both before/after snapshots for updates. Attendance punch events also store the updated attendance row and the punch event type. The Reports & audit screen includes a Changed data column alongside the timestamp and action. Passwords and password hashes are not included in audit snapshots.
