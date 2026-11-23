@@ -1,0 +1,327 @@
+{
+  "employees": [
+    {
+      "name": "viswa",
+      "department": "Product Development",
+      "designation": "Embedded programmer",
+      "email": "viswa@triovue.com",
+      "phone": "123e1242",
+      "manager": "Muthu kumar ",
+      "joined": "",
+      "status": "Active",
+      "id": "EMP1795171438548"
+    },
+    {
+      "id": "EMP001",
+      "name": "Antos Pravin",
+      "department": "Product Development",
+      "designation": "Product Development",
+      "email": "pravin@triovue.example",
+      "phone": "",
+      "manager": "",
+      "joined": "2025-01-06",
+      "status": "Active"
+    },
+    {
+      "id": "EMP002",
+      "name": "Muthukumar",
+      "department": "Hardware",
+      "designation": "Hardware Engineer",
+      "email": "",
+      "phone": "",
+      "manager": "Antos Pravin",
+      "joined": "2025-03-10",
+      "status": "Active"
+    },
+    {
+      "id": "EMP003",
+      "name": "Karthik",
+      "department": "Firmware",
+      "designation": "Embedded Engineer",
+      "email": "",
+      "phone": "",
+      "manager": "Antos Pravin",
+      "joined": "2025-04-14",
+      "status": "Active"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "ATT1795171453979",
+      "employee": "viswa",
+      "date": "2026-11-20",
+      "checkIn": "2026-11-20T10:44:13.979Z",
+      "lunchOut": "2026-11-20T10:44:15.112Z",
+      "lunchIn": "2026-11-20T10:44:16.329Z",
+      "checkOut": "2026-11-20T10:44:18.129Z",
+      "status": "Present"
+    },
+    {
+      "id": "ATT1795171369243",
+      "employee": "Antos Pravin",
+      "date": "2026-11-20",
+      "checkIn": "2026-11-20T10:42:49.243Z",
+      "lunchOut": "2026-11-20T10:42:49.905Z",
+      "lunchIn": "2026-11-20T10:42:50.517Z",
+      "checkOut": "2026-11-20T10:42:51.007Z",
+      "status": "Present"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TSK001",
+      "project": "Telephone Product",
+      "title": "Review product requirements",
+      "employee": "Muthukumar",
+      "department": "Hardware",
+      "priority": "High",
+      "start": "2026-11-20",
+      "due": "2026-11-20",
+      "progress": 35,
+      "status": "In Progress",
+      "reviewer": "Antos Pravin",
+      "remarks": ""
+    }
+  ],
+  "holidays": [
+    {
+      "id": "HOL001",
+      "date": "2026-12-25",
+      "name": "Christmas",
+      "type": "Company Holiday"
+    }
+  ],
+  "leaves": [],
+  "projects": [
+    {
+      "id": "PRJ001",
+      "name": "Telephone Product",
+      "client": "Internal",
+      "manager": "Antos Pravin",
+      "department": "Product Development",
+      "start": "2026-11-20",
+      "target": "2027-02-28",
+      "stage": "Development",
+      "progress": 20,
+      "status": "Active",
+      "remarks": ""
+    }
+  ],
+  "timesheets": [],
+  "announcements": [
+    {
+      "id": "ANN001",
+      "title": "Welcome to the Employee Portal",
+      "description": "Use this portal to manage attendance, tasks and project updates.",
+      "department": "All",
+      "published": "2026-11-20",
+      "expiry": "",
+      "by": "Super Admin",
+      "status": "Active"
+    }
+  ],
+  "audit": [
+    {
+      "id": "LOG1795171458129",
+      "action": "CHECK OUT",
+      "entity": "attendance",
+      "recordId": "ATT1795171453979",
+      "at": "2026-11-20T10:44:18.129Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171453979",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:44:13.979Z",
+        "lunchOut": "2026-11-20T10:44:15.112Z",
+        "lunchIn": "2026-11-20T10:44:16.329Z",
+        "checkOut": "2026-11-20T10:44:18.129Z",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Check out"
+      }
+    },
+    {
+      "id": "LOG1795171456329",
+      "action": "LUNCH IN",
+      "entity": "attendance",
+      "recordId": "ATT1795171453979",
+      "at": "2026-11-20T10:44:16.329Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171453979",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:44:13.979Z",
+        "lunchOut": "2026-11-20T10:44:15.112Z",
+        "lunchIn": "2026-11-20T10:44:16.329Z",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Lunch in"
+      }
+    },
+    {
+      "id": "LOG1795171455112",
+      "action": "LUNCH OUT",
+      "entity": "attendance",
+      "recordId": "ATT1795171453979",
+      "at": "2026-11-20T10:44:15.112Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171453979",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:44:13.979Z",
+        "lunchOut": "2026-11-20T10:44:15.112Z",
+        "lunchIn": "",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Lunch out"
+      }
+    },
+    {
+      "id": "LOG1795171453979",
+      "action": "CHECK IN",
+      "entity": "attendance",
+      "recordId": "ATT1795171453979",
+      "at": "2026-11-20T10:44:13.979Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171453979",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:44:13.979Z",
+        "lunchOut": "",
+        "lunchIn": "",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Check in"
+      }
+    },
+    {
+      "id": "LOG1795171438548",
+      "action": "CREATE",
+      "entity": "employees",
+      "recordId": "EMP1795171438548",
+      "at": "2026-11-20T10:43:58.548Z",
+      "by": "Local Admin",
+      "after": {
+        "name": "viswa",
+        "department": "Product Development",
+        "designation": "Embedded programmer",
+        "email": "viswa@triovue.com",
+        "phone": "123e1242",
+        "manager": "Muthu kumar ",
+        "joined": "",
+        "status": "Active",
+        "id": "EMP1795171438548"
+      }
+    },
+    {
+      "id": "LOG1795171371007",
+      "action": "CHECK OUT",
+      "entity": "attendance",
+      "recordId": "ATT1795171369243",
+      "at": "2026-11-20T10:42:51.007Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171369243",
+        "employee": "Antos Pravin",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:42:49.243Z",
+        "lunchOut": "2026-11-20T10:42:49.905Z",
+        "lunchIn": "2026-11-20T10:42:50.517Z",
+        "checkOut": "2026-11-20T10:42:51.007Z",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Check out"
+      }
+    },
+    {
+      "id": "LOG1795171370517",
+      "action": "LUNCH IN",
+      "entity": "attendance",
+      "recordId": "ATT1795171369243",
+      "at": "2026-11-20T10:42:50.517Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171369243",
+        "employee": "Antos Pravin",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:42:49.243Z",
+        "lunchOut": "2026-11-20T10:42:49.905Z",
+        "lunchIn": "2026-11-20T10:42:50.517Z",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Lunch in"
+      }
+    },
+    {
+      "id": "LOG1795171369905",
+      "action": "LUNCH OUT",
+      "entity": "attendance",
+      "recordId": "ATT1795171369243",
+      "at": "2026-11-20T10:42:49.905Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171369243",
+        "employee": "Antos Pravin",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:42:49.243Z",
+        "lunchOut": "2026-11-20T10:42:49.905Z",
+        "lunchIn": "",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Lunch out"
+      }
+    },
+    {
+      "id": "LOG1795171369243",
+      "action": "CHECK IN",
+      "entity": "attendance",
+      "recordId": "ATT1795171369243",
+      "at": "2026-11-20T10:42:49.243Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795171369243",
+        "employee": "Antos Pravin",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T10:42:49.243Z",
+        "lunchOut": "",
+        "lunchIn": "",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Check in"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "USR1795171438600",
+      "username": "viswa",
+      "name": "viswa",
+      "employeeId": "EMP1795171438548",
+      "passwordHash": {
+        "salt": "cbf8286adb41691a839987eceb2514a6",
+        "hash": "09544705aa8020838d21286785198ba534747e66273f8d1aabdad76785f2503eda9e84b2f2d9e04decc62b018afc4305482bd0a99266ed1364da4e0456d5c0e4"
+      },
+      "status": "Active",
+      "createdAt": "2026-11-20T10:43:58.600Z",
+      "mustChangePassword": false
+    }
+  ]
+}

@@ -1,0 +1,603 @@
+{
+  "employees": [
+    {
+      "name": "viswa",
+      "department": "Product Development",
+      "designation": "Embedded programmer ",
+      "email": "viswa@triovue.com",
+      "phone": "12341234",
+      "manager": "Muthukumar ",
+      "joined": "",
+      "status": "Active",
+      "id": "EMP1795176565687",
+      "accountPassword": "viswa12345"
+    },
+    {
+      "id": "EMP001",
+      "name": "Antos Pravin",
+      "department": "Product Development",
+      "designation": "Product Development",
+      "email": "pravin@triovue.example",
+      "phone": "",
+      "manager": "",
+      "joined": "2025-01-06",
+      "status": "Active"
+    },
+    {
+      "id": "EMP002",
+      "name": "Muthukumar",
+      "department": "Hardware",
+      "designation": "Hardware Engineer",
+      "email": "",
+      "phone": "",
+      "manager": "Antos Pravin",
+      "joined": "2025-03-10",
+      "status": "Active"
+    },
+    {
+      "id": "EMP003",
+      "name": "Karthik",
+      "department": "Firmware",
+      "designation": "Embedded Engineer",
+      "email": "",
+      "phone": "",
+      "manager": "Antos Pravin",
+      "joined": "2025-04-14",
+      "status": "Active"
+    }
+  ],
+  "attendance": [
+    {
+      "id": "ATT1795176580812",
+      "employee": "viswa",
+      "date": "2026-11-20",
+      "checkIn": "2026-11-20T12:09:40.812Z",
+      "lunchOut": "2026-11-20T12:09:42.176Z",
+      "lunchIn": "2026-11-20T12:09:43.302Z",
+      "checkOut": "2026-11-20T12:09:43.949Z",
+      "status": "Present"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "TSK001",
+      "project": "Telephone Product",
+      "title": "Review product requirements",
+      "employee": "Muthukumar",
+      "department": "Hardware",
+      "priority": "High",
+      "start": "2026-11-20",
+      "due": "2026-11-20",
+      "progress": 35,
+      "status": "In Progress",
+      "reviewer": "Antos Pravin",
+      "remarks": ""
+    }
+  ],
+  "holidays": [
+    {
+      "id": "HOL001",
+      "date": "2026-12-25",
+      "name": "Christmas",
+      "type": "Company Holiday"
+    }
+  ],
+  "leaves": [],
+  "projects": [
+    {
+      "name": "test",
+      "client": "test",
+      "manager": "test",
+      "department": "Product Development",
+      "start": "",
+      "target": "",
+      "stage": "Requirements",
+      "progress": 10,
+      "status": "Active",
+      "remarks": "test",
+      "id": "PRO1795193421265"
+    },
+    {
+      "id": "PRJ001",
+      "name": "Telephone Product",
+      "client": "Internal",
+      "manager": "Antos Pravin",
+      "department": "Product Development",
+      "start": "2026-11-20",
+      "target": "2027-02-28",
+      "stage": "Development",
+      "progress": 80,
+      "status": "Active",
+      "remarks": ""
+    }
+  ],
+  "timesheets": [],
+  "announcements": [
+    {
+      "id": "ANN001",
+      "title": "Welcome to the Employee Portal",
+      "description": "Use this portal to manage attendance, tasks and project updates.",
+      "department": "All",
+      "published": "2026-11-20",
+      "expiry": "",
+      "by": "Super Admin",
+      "status": "Active"
+    }
+  ],
+  "audit": [
+    {
+      "id": "LOG1795193722859",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRO1795193421265",
+      "at": "2026-11-20T16:55:22.859Z",
+      "by": "Local Admin",
+      "before": {
+        "name": "test",
+        "client": "test",
+        "manager": "test",
+        "department": "Product Development",
+        "start": "",
+        "target": "",
+        "stage": "Requirements",
+        "progress": 50,
+        "status": "Active",
+        "remarks": "test",
+        "id": "PRO1795193421265"
+      },
+      "after": {
+        "name": "test",
+        "client": "test",
+        "manager": "test",
+        "department": "Product Development",
+        "start": "",
+        "target": "",
+        "stage": "Requirements",
+        "progress": 10,
+        "status": "Active",
+        "remarks": "test",
+        "id": "PRO1795193421265"
+      }
+    },
+    {
+      "id": "LOG1795193716843",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRO1795193421265",
+      "at": "2026-11-20T16:55:16.843Z",
+      "by": "Local Admin",
+      "before": {
+        "name": "test",
+        "client": "test",
+        "manager": "test",
+        "department": "Product Development",
+        "start": "",
+        "target": "",
+        "stage": "Requirements",
+        "progress": 10,
+        "status": "Active",
+        "remarks": "test",
+        "id": "PRO1795193421265"
+      },
+      "after": {
+        "name": "test",
+        "client": "test",
+        "manager": "test",
+        "department": "Product Development",
+        "start": "",
+        "target": "",
+        "stage": "Requirements",
+        "progress": 50,
+        "status": "Active",
+        "remarks": "test",
+        "id": "PRO1795193421265"
+      }
+    },
+    {
+      "id": "LOG1795193604268",
+      "action": "UPDATE",
+      "entity": "employees",
+      "recordId": "EMP1795176565687",
+      "at": "2026-11-20T16:53:24.268Z",
+      "by": "Local Admin",
+      "before": {
+        "name": "viswa",
+        "department": "Product Development",
+        "designation": "Embedded programmer ",
+        "email": "viswa@triovue.com",
+        "phone": "12341234",
+        "manager": "Muthukumar ",
+        "joined": "",
+        "status": "Active",
+        "id": "EMP1795176565687",
+        "accountPassword": "viswa12345"
+      },
+      "after": {
+        "name": "viswa",
+        "department": "Product Development",
+        "designation": "Embedded programmer ",
+        "email": "viswa@triovue.com",
+        "phone": "12341234",
+        "manager": "Muthukumar ",
+        "joined": "",
+        "status": "Active",
+        "id": "EMP1795176565687",
+        "accountPassword": "viswa12345"
+      }
+    },
+    {
+      "id": "LOG1795193526628",
+      "action": "UPDATE",
+      "entity": "employees",
+      "recordId": "EMP1795176565687",
+      "at": "2026-11-20T16:52:06.628Z",
+      "by": "Local Admin",
+      "before": {
+        "name": "viswa",
+        "department": "Product Development",
+        "designation": "Embedded programmer ",
+        "email": "viswa@triovue.com",
+        "phone": "12341234",
+        "manager": "Muthukumar ",
+        "joined": "",
+        "status": "Active",
+        "id": "EMP1795176565687"
+      },
+      "after": {
+        "name": "viswa",
+        "department": "Product Development",
+        "designation": "Embedded programmer ",
+        "email": "viswa@triovue.com",
+        "phone": "12341234",
+        "manager": "Muthukumar ",
+        "joined": "",
+        "status": "Active",
+        "id": "EMP1795176565687",
+        "accountPassword": "viswa12345"
+      }
+    },
+    {
+      "id": "LOG1795193421265",
+      "action": "CREATE",
+      "entity": "projects",
+      "recordId": "PRO1795193421265",
+      "at": "2026-11-20T16:50:21.265Z",
+      "by": "Local Admin",
+      "after": {
+        "name": "test",
+        "client": "test",
+        "manager": "test",
+        "department": "Product Development",
+        "start": "",
+        "target": "",
+        "stage": "Requirements",
+        "progress": 10,
+        "status": "Active",
+        "remarks": "test",
+        "id": "PRO1795193421265"
+      }
+    },
+    {
+      "id": "LOG1795177080711",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRJ001",
+      "at": "2026-11-20T12:18:00.711Z",
+      "by": "Local Admin",
+      "before": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Active",
+        "remarks": ""
+      },
+      "after": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 80,
+        "status": "Active",
+        "remarks": ""
+      }
+    },
+    {
+      "id": "LOG1795177055901",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRJ001",
+      "at": "2026-11-20T12:17:35.901Z",
+      "by": "Local Admin",
+      "before": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "On Hold",
+        "remarks": ""
+      },
+      "after": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Active",
+        "remarks": ""
+      }
+    },
+    {
+      "id": "LOG1795177050213",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRJ001",
+      "at": "2026-11-20T12:17:30.213Z",
+      "by": "Local Admin",
+      "before": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Active",
+        "remarks": ""
+      },
+      "after": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "On Hold",
+        "remarks": ""
+      }
+    },
+    {
+      "id": "LOG1795177044912",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRJ001",
+      "at": "2026-11-20T12:17:24.912Z",
+      "by": "Local Admin",
+      "before": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Completed",
+        "remarks": ""
+      },
+      "after": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Active",
+        "remarks": ""
+      }
+    },
+    {
+      "id": "LOG1795177036191",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRJ001",
+      "at": "2026-11-20T12:17:16.191Z",
+      "by": "Local Admin",
+      "before": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "On Hold",
+        "remarks": ""
+      },
+      "after": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Completed",
+        "remarks": ""
+      }
+    },
+    {
+      "id": "LOG1795177027294",
+      "action": "UPDATE",
+      "entity": "projects",
+      "recordId": "PRJ001",
+      "at": "2026-11-20T12:17:07.294Z",
+      "by": "Local Admin",
+      "before": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "Active",
+        "remarks": ""
+      },
+      "after": {
+        "id": "PRJ001",
+        "name": "Telephone Product",
+        "client": "Internal",
+        "manager": "Antos Pravin",
+        "department": "Product Development",
+        "start": "2026-11-20",
+        "target": "2027-02-28",
+        "stage": "Development",
+        "progress": 20,
+        "status": "On Hold",
+        "remarks": ""
+      }
+    },
+    {
+      "id": "LOG1795176583949",
+      "action": "CHECK OUT",
+      "entity": "attendance",
+      "recordId": "ATT1795176580812",
+      "at": "2026-11-20T12:09:43.949Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795176580812",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T12:09:40.812Z",
+        "lunchOut": "2026-11-20T12:09:42.176Z",
+        "lunchIn": "2026-11-20T12:09:43.302Z",
+        "checkOut": "2026-11-20T12:09:43.949Z",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Check out"
+      }
+    },
+    {
+      "id": "LOG1795176583302",
+      "action": "LUNCH IN",
+      "entity": "attendance",
+      "recordId": "ATT1795176580812",
+      "at": "2026-11-20T12:09:43.302Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795176580812",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T12:09:40.812Z",
+        "lunchOut": "2026-11-20T12:09:42.176Z",
+        "lunchIn": "2026-11-20T12:09:43.302Z",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Lunch in"
+      }
+    },
+    {
+      "id": "LOG1795176582176",
+      "action": "LUNCH OUT",
+      "entity": "attendance",
+      "recordId": "ATT1795176580812",
+      "at": "2026-11-20T12:09:42.176Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795176580812",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T12:09:40.812Z",
+        "lunchOut": "2026-11-20T12:09:42.176Z",
+        "lunchIn": "",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Lunch out"
+      }
+    },
+    {
+      "id": "LOG1795176580812",
+      "action": "CHECK IN",
+      "entity": "attendance",
+      "recordId": "ATT1795176580812",
+      "at": "2026-11-20T12:09:40.812Z",
+      "by": "Local Admin",
+      "after": {
+        "id": "ATT1795176580812",
+        "employee": "viswa",
+        "date": "2026-11-20",
+        "checkIn": "2026-11-20T12:09:40.812Z",
+        "lunchOut": "",
+        "lunchIn": "",
+        "checkOut": "",
+        "status": "Present"
+      },
+      "details": {
+        "event": "Check in"
+      }
+    },
+    {
+      "id": "LOG1795176565687",
+      "action": "CREATE",
+      "entity": "employees",
+      "recordId": "EMP1795176565687",
+      "at": "2026-11-20T12:09:25.687Z",
+      "by": "Local Admin",
+      "after": {
+        "name": "viswa",
+        "department": "Product Development",
+        "designation": "Embedded programmer ",
+        "email": "viswa@triovue.com",
+        "phone": "12341234",
+        "manager": "Muthukumar ",
+        "joined": "",
+        "status": "Active",
+        "id": "EMP1795176565687"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "USR1795176565739",
+      "username": "viswa",
+      "name": "viswa",
+      "employeeId": "EMP1795176565687",
+      "passwordHash": {
+        "salt": "81e0a460e07080999fe62d1c88c502c4",
+        "hash": "1a29f71e32ba878ce2815e975ecdd12dbb9f5587eea86733fb9429fc473141939483ac247524930a116ed694369ed00297ebd214f0a593357f09cbaaf6e4f815"
+      },
+      "status": "Active",
+      "createdAt": "2026-11-20T12:09:25.739Z",
+      "mustChangePassword": false
+    }
+  ]
+}
