@@ -1,0 +1,9 @@
+{
+  "name": "triovue-employee-portal",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free Node.js employee portal starter for Triovue Innovation Solutions",
+  "main": "server.js",
+  "scripts": {"start": "node server.js", "dev": "node --watch server.js"},
+  "engines": {"node": ">=18"}
+}
